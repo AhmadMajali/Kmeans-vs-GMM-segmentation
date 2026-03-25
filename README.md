@@ -26,3 +26,8 @@ Ensure you have Python installed, then install the necessary dependencies:
 Bash
 
 pip install opencv-python matplotlib scikit-learn numpy
+
+**IMPORTANT**
+
+you need to update the path for the image to match the path locally 
+
