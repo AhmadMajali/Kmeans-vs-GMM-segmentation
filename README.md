@@ -1,33 +1,33 @@
-# Kmeans-vs-GMM-segmentation
-Palmprint Image Segmentation
+# K-Means vs. GMM: Palmprint Image Segmentation
 
-This project implements and compares two popular unsupervised machine learning techniques—K-Means Clustering and Gaussian Mixture Models (GMM)—to perform image segmentation on palmprint images.
-** Overview**
+This project implements and compares two unsupervised machine learning methods, K-Means clustering and Gaussian Mixture Models (GMM), for segmenting palmprint images.
 
-Segmentation is the process of partitioning a digital image into multiple segments to simplify its representation. In the context of palmprint recognition, this is a crucial preprocessing step used to isolate the hand from the background.
+## Result
 
-    K-Means: An iterative algorithm that partitions data into K clusters where each pixel belongs to the cluster with the nearest mean (centroid).
+![Original image, K-Means segmentation and GMM segmentation](images/segmentation_results.png)
 
-    GMM: A probabilistic model that assumes all data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters.
+Left to right: the original image, the K-Means mask and the GMM mask. On this example, GMM gives a cleaner hand outline, while K-Means leaves stray specks along the bottom edge. The two masks have opposite colours because cluster labels are arbitrary. This is one example image, not a benchmark.
 
- **Features**
+## Overview
 
-    Color Space Conversion: Converts images from BGR (OpenCV default) to RGB for accurate visualization.
+Segmentation partitions an image into regions to simplify its representation. In palmprint recognition it is a key preprocessing step, used to isolate the hand from the background.
 
-    Feature Vectorization: Reshapes 2D images into 1D pixel arrays for clustering.
+- **K-Means:** an iterative algorithm that splits the data into K clusters, assigning each pixel to the cluster with the nearest mean (centroid).
+- **GMM:** a probabilistic model that assumes the data comes from a mixture of a finite number of Gaussian distributions with unknown parameters.
 
-    Dual-Model Comparison: Side-by-side visualization of K-Means vs. GMM results.
+## Features
 
-    Automated Mask Generation: Produces binary masks that can be used for further image processing.
+- **Colour space conversion:** converts images from BGR (OpenCV's default) to RGB for correct display.
+- **Feature vectorisation:** reshapes the 2D image into a list of pixels for clustering.
+- **Side-by-side comparison:** shows the K-Means and GMM results next to the original.
+- **Mask generation:** produces binary masks that can be used in further image processing.
 
-**Requirements**
+## Requirements
 
-Ensure you have Python installed, then install the necessary dependencies:
-Bash
+Install the dependencies:
 
+```bash
 pip install opencv-python matplotlib scikit-learn numpy
+```
 
-**IMPORTANT**
-
-you need to update the path for the image to match the path locally 
-
+**Important:** update the image path in the code to point to an image on your machine.
