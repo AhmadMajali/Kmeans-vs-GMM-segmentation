@@ -4,7 +4,7 @@ This project implements and compares two unsupervised machine learning methods, 
 
 ## Result
 
-![Original image, K-Means segmentation and GMM segmentation](images/segmentation_results.png)
+![Original image, K-Means segmentation and GMM segmentation](segmentation_results.png)
 
 Left to right: the original image, the K-Means mask and the GMM mask. On this example, GMM gives a cleaner hand outline, while K-Means leaves stray specks along the bottom edge. The two masks have opposite colours because cluster labels are arbitrary. This is one example image, not a benchmark.
 
